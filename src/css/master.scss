@@ -1,43 +1,47 @@
-$primary-color-dark:   #00796B;
-$primary-color:        #009688;
-$primary-color-light:  #B2DFDB;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #FF9800;
-$primary-text-color:   #212121;
+$primary-color-dark: #00796B;
+$primary-color: #009688;
+$primary-color-light: #B2DFDB;
+$primary-color-text: #FFFFFF;
+$accent-color: #FF9800;
+$primary-text-color: #212121;
 $secondary-text-color: #727272;
-$divider-color:        #F6F6F6;
-body{
+$divider-color: #F6F6F6;
+body {
   padding: 0;
   margin: 0;
 }
+
 .app {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
-.toolbox{
+
+.toolbox {
   flex: 1;
   background-color: $divider-color;
 
-  h1{
-   background-color: $primary-color-dark;
-   margin: 0;
-   color: $primary-color-text;
-   font-size: 1.6rem;
-   text-align: center;
-   padding: 0.4rem;
- }
+  h1 {
+    background-color: $primary-color-dark;
+    margin: 0;
+    color: $primary-color-text;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0.4rem;
+  }
 }
-.canvas{
+
+.canvas {
   flex: 4;
   background-image: url(../img/repeater.jpg);
   position: relative;
 }
-.listItem{
+
+.listItem {
   display: flex;
   flex-flow: row;
   justify-content: space-between;;
-  div{
+  div {
     flex-grow: 1;
     text-align: center;
     padding: 1em 0;
@@ -47,7 +51,7 @@ body{
     background-color: #e5e5e5;
     border-radius: .3em;
   }
-  button{
+  button {
     border: none;
     background-color: inherit;
     display: block;
@@ -55,15 +59,16 @@ body{
     text-align: center;
     width: 100%;
   }
-  .item{
+  .item {
     background-color: $primary-color-light;
     box-shadow: 0px 0px 3px 0px $primary-color;
   }
-  .item:hover{
+  .item:hover {
     background-color: $primary-color;
   }
 }
-.inductor{
+
+.inductor {
   background-image: url(../img/resistor.svg);
   background-repeat: no-repeat;
   flex-grow: 1;
@@ -74,7 +79,8 @@ body{
   background-color: #e5e5e5;
 
 }
-.resistor{
+
+.resistor {
   background-image: url(../img/inductor.svg);
   background-repeat: no-repeat;
   flex-grow: 1;
@@ -84,18 +90,21 @@ body{
   background-position: center center;
   background-color: #e5e5e5;
 }
+
 .canvas {
-  image{
+  image {
     position: absolute;
   }
-  svg{
+  svg {
     width: 100%;
     min-height: 99vh;
   }
 }
-.active{
+
+.active {
   background-color: $accent-color !important;
 }
+
 @media screen and (max-width: 480px) {
   .app {
     flex-direction: column;
